@@ -110,10 +110,21 @@ form .form-select {
     box-shadow: none !important;
 }
 
+#set {
+    margin: 70px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice {
+    font-weight: 800;
+}
+
 /* Content */
 
 #content {
-    margin: 70px auto 0 auto;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, 270px);
