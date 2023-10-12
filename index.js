@@ -17,7 +17,10 @@ async function getData()  {
 getData()
 
 data = JSON.parse(localStorage.getItem('data'))
+console.log(data)
 counts = data.map(elem => elem.name)
+
+
 
 let searched = data
 
@@ -124,7 +127,7 @@ class Countries extends React.Component {
             input: e.target.value,
         })
 
-        if (e.target.value.length > 0 && this.state.filter !== 'all') {
+        if (e.target.value.length > 0 && this.state.filter.length > 0 && this.state.filter !== 'all') {
             searched = data.filter(elem => {
                 return elem.name.toLowerCase().startsWith(e.target.value.toLowerCase()) && elem.region.toLowerCase() === this.state.filter
             })
@@ -133,7 +136,7 @@ class Countries extends React.Component {
                 return elem.name.toLowerCase().startsWith(e.target.value.toLowerCase())
             })
         } else {
-            if (this.state.filter == 'all' || this.state.filter.length == 0) {
+            if (this.state.filter == 'all' || this.state.filter == '') {
                 searched = data
             } else {
                 searched = data.filter(elem => elem.region.toLowerCase() == this.state.filter)
@@ -151,25 +154,26 @@ class Countries extends React.Component {
         this.setState({
             filter: e.target.value
         })
-        searched = data
-        if (e.target.value == 'all' && this.state.input.length > 0) {
+        if (e.target.value == 'all' || e.target.value == '' && this.state.input.length > 0) {
             searched = data.filter(elem => elem.name.toLowerCase().startsWith(this.state.input.toLowerCase()))
-        } else if (e.target.value !== 'all' && this.state.input.length > 0) {
+        } else if (e.target.value !== 'all' || e.target.value !== '' && this.state.input.length > 0) {
             searched = data.filter(elem => {
                 return elem.name.toLowerCase().startsWith(this.state.input.toLowerCase()) && elem.region.toLowerCase() === e.target.value
             })
-        } else if (e.target.value == 'all' && this.state.input.length == 0) {
+        } else if (e.target.value == 'all' || e.target.value == '' && this.state.input.length == 0) {
             searched = data
         } else {
             searched = data.filter(elem => elem.region.toLowerCase() == e.target.value)
         }
+
         if (!searched.length) {
             this.setState({msg: ''})
         } else {
             this.setState({msg: 'none'})
         }
 
-        console.log(typeof e.target.value)
+        console.log(searched)
+        console.log(e.target.value)
     }
 
     render() {
