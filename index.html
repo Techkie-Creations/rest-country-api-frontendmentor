@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techkie Creations | REST API Countries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="./images/icon.jpg" type="image/jpg">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Where in the world?</h1>
+        <p class="btn icon" id="mode" onclick="mode()"><i id="side" class="fa-solid fa-moon"></i> <span id="switch">Dark Mode</span></p>
+    </header>
+
+    <!-- SEARCH BOX AND FILTER -->
+    <div id="data"></div>
+
+    <!-- COUNTRY TILES -->
+    <div id="content" class="blank"></div>
+
+    <!-- WHEN COUNTRY IS SELECTED -->
+    <div class="picked"></div>
+    
+    <!-- FOOTER -->
+    <footer>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://www.frontendmentor.io/profile/Techkie-Creations">Techkie Creations</a>.
+          <br>
+        </p>
+        <span class="copy">&copy; 2023</span>
+      </footer>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="index.js" type="text/babel"></script>
+</body>
+</html>

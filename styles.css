@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+    --body-bg-light: hsl(0, 4%, 87%);
+    --body-bg-dark: hsl(207, 26%, 17%);
+    --light-common: hsl(0, 0%, 100%);
+    --dark-common: hsl(209, 23%, 22%);
+    --light-text: hsl(200, 15%, 8%);
+}
+
+li {
+    list-style: none;
+}
+
+/* BODY AND ITS STATES */
+
+body {
+    background-color: var(--body-bg-light);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300 !important;
+}
+
+.bg-light {
+    background-color: var(--body-bg-light) !important;
+    color: var(--light-text);
+} 
+
+.bg-dark {
+    background-color: var(--body-bg-dark) !important;
+    color: var(--light-common);
+}
+
+/* HEADER */
+
+header {
+    background-color: hsl(0, 0%, 100%);
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px black;
+}
+
+header h1 {
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+header #mode {
+    font-size: medium;
+}
+
+header .lighten:hover {
+    background-color: var(--dark-common) !important;
+    color: var(--light-common) !important;
+}
+
+header .darken:hover {
+    background-color: var(--light-common) !important;
+    color: var(--light-text) !important;
+}
+
+header #mode #switch {
+    font-weight: 600;
+}
+
+
+header #mode .fa-solid {
+    margin-right: 5px;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+form .search-box {
+    width: 30%;
+}
+
+form .search-box .input-group {
+    width: 100%;
+}
+
+
+form .form-select {
+    width: 30%;
+}
+
+.input-group-addon {
+    background-color: var(--light-common) !important;
+}
+
+::placeholder {
+    font-size: medium !important;
+}
+
+.form-control {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/* Content */
+
+#content {
+    margin: 70px auto 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 270px);
+    align-items: center;
+    justify-content: center;
+}
+
+#content .tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin: 10px;
+    padding: 0 !important;
+    border: 0;
+    box-shadow: -3px 3px 5px black;
+}
+
+#content .tile:hover {
+    opacity: .8;
+}
+
+#content .tile:active {
+    scale: .95;
+}
+
+#content .tile img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+#content .tile, #content .tile img {
+    border-radius: 10px;
+}
+
+#content .tile .detail {
+    padding: 0 15px;
+    text-align: left;
+    width: 100%;
+}
+
+#content .tile .detail .random {
+    font-size: 17px;
+    word-break: break-word !important;
+    font-weight: 800;
+}
+
+/* EXTRA */
+.none {
+    display: none !important;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.light {
+    background-color: var(--light-common) !important;
+    color: var(--light-text) !important;
+}
+
+.dark {
+    background-color: var(--dark-common) !important;
+    color: var(--light-common) !important;
+}
+
+
+/* SELECTED COUNTRY */
+
+.picked {
+    padding: 30px;
+}
+
+.picked .btn {
+    width: 110px;
+    height: 35px;
+    box-shadow: 3px 3px 5px black;
+    
+}
+
+.picked .btn,
+.picked .btn:focus,
+.picked .btn:active {
+    outline: none !important;
+    border: none !important;
+}
+
+.picked .unique {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    font-size: 16px;
+}
+
+.picked .unique img {
+    width: 50%;
+    height: 450px;
+}
+
+.picked .unique .side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 450px;
+    gap: 2rem;
+}
+
+.picked .unique .side .more-info .info {
+    display: flex;
+    gap: 3rem;
+}
+
+.picked .unique .side .more-info .info .info1 {
+    width: 60%;
+}
+
+.picked .unique .side .more-info .info-head {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.picked .unique .side .borders {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+}
+
+.picked .unique .side .borders .count {
+    display: grid;
+    /* width: 30%; */
+    grid-template-columns: repeat(auto-fit, 150px);
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1rem;
+}
+
+.picked .unique .side .borders .count .block {
+    padding: 10px;
+    background-color: var(--light-common);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+    text-align: center;
+    font-size: 30px;
+    color: darkred !important;
+}
+
+.message .inner-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message .inner-msg .note {
+    padding: 0 10px;
+    color: darkgreen;
+}
+
+.message .sizer {
+    font-size: 50px;
+    padding-right: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+}
+
+.attribution {
+    margin: 50px auto 20px auto;
+    font-size: 13px;
+}
+
+.copy {
+    font-weight: 600;
+}
+
+.attribution a {
+    color: orange;
+}
+
+.attribution a:visited {
+    color: brown;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 770px) {
+    
+
+
+
+    .picked .unique {
+        flex-direction: column;
+    }
+
+    .picked .unique img {
+        width: 100%;
+    }
+
+    .picked .unique .side {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form .search-box {
+        width: 80%;
+    }
+
+    form .form-select {
+        width: 50%;
+    }
+
+    .picked .unique .side .more-info .info {
+        flex-direction: column;
+    }
+
+    .message .inner-msg {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .picked .unique img {
+        margin-bottom: 70px;
+    }
+    
+}
