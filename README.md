@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [You are already here](https://github.com/Techkie-Creations/rest-country-api-frontendmentor)
-- Live Site URL: [Base Apparel Frontend Mentor](https://techkie-creations.github.io/rest-country-api-frontendmentor)
+- Live Site URL: [REST Countries API Frontend Mentor](https://techkie-creations.github.io/rest-country-api-frontendmentor)
 
 ## My process
 
